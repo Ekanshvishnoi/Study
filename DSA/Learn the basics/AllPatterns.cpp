@@ -65,6 +65,30 @@ void print7(int r){
   cout << endl ;
   }
 }
+//diamond pattern
+void print8(int r){
+  for(int i=0 ; i<=r ; i++){
+    for(int j=r-i+1; j>=0 ; j--){
+      cout << "  " ;
+    }
+    for( int j=1 ;j<=2*i+1 ;j++){
+      cout << "*" << " ";
+    }
+  cout << endl ;
+  }
+
+  for(int i=r-1 ; i>=0 ; i--){
+    for(int j=0; j<=r-i+1 ; j++){
+      cout << "  " ;
+    }
+    for( int j=2*i+1 ;j>=1 ;j--){
+      cout << "*" << " ";
+    }
+  cout << endl ;
+  }
+}
+
+
 int main(){
   
   int r,c ;
@@ -76,7 +100,8 @@ int main(){
   cout << "Enter no. of rows" << r<< endl  ;
   cout << "Enter no. of columns" << c << endl;
 
-  print7(r);
+
+  print8(r);
   return 0 ;
 
 }
